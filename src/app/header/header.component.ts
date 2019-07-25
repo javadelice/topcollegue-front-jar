@@ -23,11 +23,11 @@ deconnexion() {
 */
 }
 
-voteActive(){
+voteActive() {
 
 }
 
-classementActive(){
+classementActive() {
 
 }
 

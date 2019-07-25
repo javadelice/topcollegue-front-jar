@@ -16,13 +16,20 @@
             <div class="row mt">
 
               <div class="col-4">
-                <td><button type="button"class="btn btn-success">+</button></td>
+                  <ng-container *ngIf="">
+                      <td><button type="button"class="btn btn-success">+</button></td>
+                      <p> <a href="#" class="btn btn-success"(click)="votePlus()"> ++ </a></p>
+                  </ng-container>
+
               </div>
               <div class="col-4">
                   <td> </td>
                 </div>
               <div class="col-4">
-                  <td><button type="button"class="btn btn-warning">-</button></td>
+                  <ng-container *ngIf="">
+                      <td><button type="button"class="btn btn-warning" (click)="voteMoins()">--</button></td>
+                  </ng-container>
+
                 </div>
             </div>
           </div>

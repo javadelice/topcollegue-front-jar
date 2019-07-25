@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { User } from '../models/User';
 import { UsersMock } from '../mock/UsersMock';
+import { Vote } from '../models/Vote';
+import { VotesMock } from '../mock/VotesMock';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { UsersMock } from '../mock/UsersMock';
 export class VoterComponent implements OnInit {
 
   userList: User[] = new UsersMock().getList();
-
+  voteList: Vote[] = new VotesMock().getList();
 
   constructor(private srv: DataService) { }
 
