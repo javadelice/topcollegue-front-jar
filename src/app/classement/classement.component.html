@@ -1,43 +1,10 @@
 <h1> Top Collègues </h1>
 
-<div id="menu">
-  <ul>
-      <div class="row justify-content-center align-items-center">
-          score 1
-    <a href="page1.html">
-      <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        class="img-fluid" alt="photo" />
-    </a>
-    nom - prénom 1
+
+<ul *ngFor="let unElu of elus">
+    <div class="row justify-content-around align-items-center">
+    {{unElu.score}}  <img [src]="unElu.photo" class="img-fluid">  {{unElu.nom}} - {{unElu.prenom}}
     </div>
-
-    <br>
-    <br>
-
-    <div class="row justify-content-center align-items-center">
-        score 2
-    <a href="page2.html">
-      <img
-        src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        class="img-fluid" />
-    </a>
-    nom - prénom 2
-</div>
-
-    <br>
-    <br>
-    <div class="row justify-content-center align-items-center">
-      score 3
-      <a href="page3.html">
-        <img
-          src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          class="img-fluid" />
-      </a>
-      nom - prénom 3
-    </div>
-
-
-    <br>
-    <br>
+    <br> <br>
   </ul>
-</div>
+
