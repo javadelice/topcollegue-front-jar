@@ -16,6 +16,15 @@ export class VoterComponent implements OnInit {
   userList: User[] = new UsersMock().getList();
   voteList: Vote[] = new VotesMock().getList();
 
+
+votePlus() {
+
+}
+
+voteMoins() {
+
+}
+
   constructor(private srv: DataService) { }
 
   ngOnInit() {
