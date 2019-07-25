@@ -3,6 +3,6 @@ export class User {
     public matricule: string,
     public nom: string,
     public prenoms: string,
-    public photoUrl: string)
-    {}
+    public photoUrl: string) {}
+
 }
