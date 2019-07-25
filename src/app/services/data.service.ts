@@ -23,7 +23,7 @@ recupUser(): Observable<User> {
 }
 
 recupUserList(): Observable<User[]> {
-  return this.httpClient.get<User[]>(environment.backendUrl+"PATH_TO_GET_ALL_USER", {withCredentials: true})
+  return this.httpClient.get<User[]>(environment.backendUrl + 'PATH_TO_GET_ALL_USER', {withCredentials: true})
   .pipe(
     map(tableauUserRecup =>
       tableauUserRecup.map(oneUser => {
@@ -36,7 +36,7 @@ recupUserList(): Observable<User[]> {
 }
 
 recupVoteList(): Observable<Vote[]> {
-  return this.httpClient.get<Vote[]>(environment.backendUrl+"PATH_TO_GET_ALL_VOTE", {withCredentials: true})
+  return this.httpClient.get<Vote[]>(environment.backendUrl + 'PATH_TO_GET_ALL_VOTE', {withCredentials: true})
   .pipe(
     map(tableauUserRecup =>
       tableauUserRecup.map(oneUser => {
