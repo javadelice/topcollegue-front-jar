@@ -6,19 +6,27 @@ import { ClassementComponent } from './classement/classement.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 import { VoterComponent } from './voter/voter.component';
 
-// remplacer HeaderComponent par votre composant
 const ROUTES: Routes = [
-  { path: 'login', component: HeaderComponent },
-  { path: 'vote', component: VoterComponent },
-  { path: 'classement', component: ClassementComponent },
-];
+  { path: 'login', component: LoginComponent },
+  { path: 'vote', component: HeaderComponent },
+  { path: 'classement', component: HeaderComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login'}
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    LoginComponent
+  ],
+  imports: [
+    FormsModule,
     VoterComponent,
     ClassementComponent
   ],

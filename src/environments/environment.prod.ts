@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendUrl: 'https://jbtmathieu.github.io/topcollegue-jar'
+  backendUrl: 'https://javadelice.github.io/topcollegue-front-jar/'
 };
