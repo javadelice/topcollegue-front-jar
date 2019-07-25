@@ -1,17 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppComponent } from './app.component';
 import { ClassementComponent } from './classement/classement.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
-
-
-import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { VoterComponent } from './voter/voter.component';
 
@@ -26,16 +19,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    VoterComponent
-
-
-    ClassementComponent,
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    HeaderComponent
-
+    VoterComponent,
+    ClassementComponent
   ],
   imports: [
     BrowserModule,
