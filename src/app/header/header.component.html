@@ -1,0 +1,30 @@
+<section>
+  <h1 align="center">Top Collègues</h1>
+</section>
+<section *ngIf="currentUser">
+  <p class="text-right">currentUser.name <a (click)="deconnexion()" routerLink='participer'>Logout</a></p>
+</section>
+
+<nav aria-label="Navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" routerLink='vote' (click)="voteActive()" aria-checked=""
+      name="buttonVotes"> Votes</a></li>
+    <li class="page-item"><a class="page-link" routerLink='classement' (click)="classementActive()"
+      name="buttonClassement"> Classement</a></li>
+
+  </ul>
+</nav>
+
+
+
+
+<section>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-info active">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Votes
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="option2" autocomplete="off"> Classement
+    </label>
+  </div>
+</section>
