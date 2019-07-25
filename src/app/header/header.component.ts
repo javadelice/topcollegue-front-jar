@@ -13,7 +13,7 @@ currentUser:string="";
 
 constructor() {}
 
-deconnexion(){
+deconnexion() {
   /*this.authService.logout().subscribe(() =>{}
   this.authService.resetCollegue();
   this.router.navigate(['/login']);
