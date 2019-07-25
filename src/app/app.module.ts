@@ -1,5 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppComponent } from './app.component';
+import { ClassementComponent } from './classement/classement.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +24,13 @@ const ROUTES: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+
+    ClassementComponent,
+  ],
+  imports: [
+    BrowserModule,
+    NgbModule,
+
     HeaderComponent
   ],
   imports: [
@@ -27,6 +40,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     NgbModule,
     BrowserModule
+
 
   ],
   providers: [],
