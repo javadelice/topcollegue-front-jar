@@ -12,7 +12,7 @@ import { VoterComponent } from './voter/voter.component';
 const ROUTES: Routes = [
   { path: 'login', component: HeaderComponent },
   { path: 'vote', component: VoterComponent },
-  { path: 'classement', component: HeaderComponent },
+  { path: 'classement', component: ClassementComponent },
 ];
 
 @NgModule({
