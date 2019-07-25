@@ -13,35 +13,36 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { VoterComponent } from './voter/voter.component';
 
 // remplacer HeaderComponent par votre composant
 const ROUTES: Routes = [
   { path: 'login', component: HeaderComponent },
-  { path: 'vote', component: HeaderComponent },
+  { path: 'vote', component: VoterComponent },
   { path: 'classement', component: HeaderComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    VoterComponent
+
 
     ClassementComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
-
     HeaderComponent
+
   ],
   imports: [
-
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
     NgbModule,
     BrowserModule
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
