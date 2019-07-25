@@ -4,4 +4,5 @@ export class User {
     public nom: string,
     public prenoms: string,
     public photoUrl: string) {}
+
 }
