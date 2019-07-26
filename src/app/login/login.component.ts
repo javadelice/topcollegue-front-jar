@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     this.authService.authentifier(this.nomUtilisateur, this.motDePasse, this.photoUrl)
     .subscribe(() => {
       this.router.navigate(['/vote']);
+      this.authService.publierLogin(true);
     }, (error: HttpErrorResponse) => {
       this.isError = true;
       if (error.status == 401) {
