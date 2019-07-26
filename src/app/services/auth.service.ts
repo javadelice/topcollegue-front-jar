@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { User } from '../models/User';
 
 const URL_BACKEND = environment.backendUrl;
@@ -10,6 +10,14 @@ const URL_BACKEND = environment.backendUrl;
   providedIn: 'root'
 })
 export class AuthService {
+
+  private subLogin = new Subject<boolean>();
+  publierLogin(isLoggedIn:boolean) {
+    this.subLogin.next(isLoggedIn);
+  }
+  abonnmenentLoggin(): Observable<boolean> {
+    return this.subLogin.asObservable();
+  }
 
   constructor(private httpClient: HttpClient) { }
 
