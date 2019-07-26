@@ -4,6 +4,8 @@ import { AuthService } from '../services/auth.service';
 import { Observable } from 'rxjs';
 import { User } from '../models/User';
 import { UsersMock } from '../mock/UsersMock';
+import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +16,16 @@ export class HeaderComponent implements OnInit {
   isLoggedIn : Observable<User>;
 
 
-constructor(private authService:AuthService) {
+constructor(private authService:AuthService, private router: Router) {
   this.isLoggedIn = this.authService.isLoggedIn();
 }
 
 deconnexion() {
-  this.authService.logout();
+  this.authService.logout().subscribe(() => {
+    this.router.navigate(['/login']);
+  }, (error:HttpErrorResponse) => {
+    console.log(error);
+  });
 }
 
 voteActive(){
