@@ -14,6 +14,7 @@ export class AuthService {
   private subLogin = new Subject<boolean>();
   publierLogin(isLoggedIn:boolean) {
     this.subLogin.next(isLoggedIn);
+
   }
   abonnmenentLoggin(): Observable<boolean> {
     return this.subLogin.asObservable();

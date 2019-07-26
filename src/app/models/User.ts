@@ -5,6 +5,7 @@ export class User {
     public motDePasse: string,
     public nom: string,
     public prenoms: string,
-    public photoUrl: string) {}
+    public photoUrl: string)
+    {}
 
 }
