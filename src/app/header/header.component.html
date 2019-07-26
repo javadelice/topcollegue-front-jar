@@ -4,6 +4,7 @@
 
 <nav class="navbar navbar-expand navbar-light" style="background-color: #e3f2fd;" *ngIf="isLoggedIn">
   <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    Bienvenue {{userPrenoms}} {{userNom | uppercase}}
   </div>
   <div class="mx-auto order-0">
     <a class="page-link" routerLink='/vote' routerLinkActive="active-link" aria-checked="" name="buttonVotes"> Votes</a>

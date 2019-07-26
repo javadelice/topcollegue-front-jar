@@ -14,19 +14,30 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class HeaderComponent implements OnInit {
   isLoggedIn: boolean;
+  userNom:string;
+  userPrenoms:string;
   actionSub: Subscription;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.authService.isLoggedIn().subscribe((collegue) => {
+      this.userNom = collegue.nom;
+      this.userPrenoms = collegue.prenoms;
       this.isLoggedIn = true;
     }, (error:HttpErrorResponse) => {
       this.isLoggedIn = false;
     });
 
-    this.actionSub = this.authService.abonnmenentLoggin().subscribe((isLoggedIn) => {
+    this.actionSub = this.authService.abonnementLoggin().subscribe((isLoggedIn) => {
       this.isLoggedIn = isLoggedIn;
+      this.authService.isLoggedIn().subscribe((collegue) => {
+        this.userNom = collegue.nom;
+        this.userPrenoms = collegue.prenoms;
+        this.isLoggedIn = true;
+      }, (error:HttpErrorResponse) => {
+        this.isLoggedIn = false;
+      });
     }, (error:HttpErrorResponse) => {
       this.isLoggedIn = false;
       console.log(error);
@@ -38,6 +49,8 @@ export class HeaderComponent implements OnInit {
     this.authService.logout().subscribe(() => {
       this.router.navigate(['/login']);
       this.isLoggedIn = false;
+      this.userNom="";
+      this.userPrenoms="";
     }, (error: HttpErrorResponse) => {
       console.log(error);
     });
