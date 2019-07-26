@@ -43,14 +43,6 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  voteActive() {
-
-  }
-
-  classementActive() {
-
-  }
-
   ngOnDestroy(): void {
     this.actionSub.unsubscribe();
   }
