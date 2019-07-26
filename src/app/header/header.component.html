@@ -2,7 +2,7 @@
   <h1 align="center">Top Collègues</h1>
 </section>
 <section *ngIf="isLoggedIn">
-  <p class="text-right">{{isLoggedIn.value}}<a (click)="deconnexion()" routerLink=''>Logout</a></p>
+  <p class="text-right">{{isLoggedIn}}<a (click)="deconnexion()" routerLink=''>Logout</a></p>
 <nav aria-label="Navigation">
   <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" routerLink='/vote' (click)="voteActive()" aria-checked=""
