@@ -70,6 +70,10 @@ posterVote(matriVotant: string, operation: string,  matriElu: string): Observabl
 
 }
 
+  recupScore(): Observable<EluScoreDTO[]> {
+    return this.httpClient.get<EluScoreDTO[]>(environment.backendUrl + 'topcollegues/score', {withCredentials:true});
+  }
+
 }
 
 
