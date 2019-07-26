@@ -11,15 +11,6 @@ const URL_BACKEND = environment.backendUrl;
 })
 export class AuthService {
 
-
-  isLoginSubject = new BehaviorSubject<boolean>(this.hasToken());
- /**
-   * if we have token the user is loggedIn
-   *
-   */
-  private hasToken() : boolean {
-    return !!localStorage.getItem('token');
-
   private subLogin = new Subject<boolean>();
   publierLogin(isLoggedIn:boolean) {
     this.subLogin.next(isLoggedIn);
@@ -40,13 +31,6 @@ export class AuthService {
   }
 
   logout() {
-
-    localStorage.removeItem('token');
-    this.isLoginSubject.next(false);
-    localStorage.removeItem('currentUser');
-      localStorage.removeItem('token');
-      sessionStorage.removeItem('token');
-
     return this.httpClient.post(URL_BACKEND + 'logout', {}, {withCredentials:true});
   }
 
