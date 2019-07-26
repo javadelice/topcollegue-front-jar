@@ -11,18 +11,9 @@ const URL_BACKEND = environment.backendUrl;
 })
 export class AuthService {
 
-  isLoginSubject = new BehaviorSubject<boolean>(this.hasToken());
- /**
-   * if we have token the user is loggedIn
-   * 
-   */
-  private hasToken() : boolean {
-    return !!localStorage.getItem('token');
-  }
   constructor(private httpClient: HttpClient) { }
 
   authentifier(nomUtilisateur: string, motDePasse: string, photoUrl: string) {
-    localStorage.setItem('token', 'JWT');
     return this.httpClient.post(URL_BACKEND + 'topcollegues/auth', {
       "nomUtilisateur": nomUtilisateur,
       "motDePasse": motDePasse,
@@ -31,8 +22,6 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem('token');
-    this.isLoginSubject.next(false);
     return this.httpClient.post(URL_BACKEND + 'logout', {}, {withCredentials:true});
   }
 
