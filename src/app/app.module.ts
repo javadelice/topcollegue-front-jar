@@ -10,11 +10,12 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { VoterComponent } from './voter/voter.component';
+import { AuthGuard } from './services/auth.guard';
 
 const ROUTES: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'vote', component: VoterComponent },
-  { path: 'classement', component: ClassementComponent },
+  { path: 'vote', canActivate: [AuthGuard], component: VoterComponent },
+  { path: 'classement', canActivate: [AuthGuard], component: ClassementComponent },
   { path: '', pathMatch: 'full', redirectTo: 'login'}
 ];
 

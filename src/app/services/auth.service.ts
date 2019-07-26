@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { User } from '../models/User';
 
 const URL_BACKEND = environment.backendUrl;
@@ -11,6 +11,7 @@ const URL_BACKEND = environment.backendUrl;
 })
 export class AuthService {
 
+
   isLoginSubject = new BehaviorSubject<boolean>(this.hasToken());
  /**
    * if we have token the user is loggedIn
@@ -18,11 +19,19 @@ export class AuthService {
    */
   private hasToken() : boolean {
     return !!localStorage.getItem('token');
+
+  private subLogin = new Subject<boolean>();
+  publierLogin(isLoggedIn:boolean) {
+    this.subLogin.next(isLoggedIn);
+
   }
+  abonnmenentLoggin(): Observable<boolean> {
+    return this.subLogin.asObservable();
+  }
+
   constructor(private httpClient: HttpClient) { }
 
   authentifier(nomUtilisateur: string, motDePasse: string, photoUrl: string) {
-    localStorage.setItem('token', 'JWT');
     return this.httpClient.post(URL_BACKEND + 'topcollegues/auth', {
       "nomUtilisateur": nomUtilisateur,
       "motDePasse": motDePasse,
@@ -31,6 +40,7 @@ export class AuthService {
   }
 
   logout() {
+
     localStorage.removeItem('token');
     this.isLoginSubject.next(false);
     localStorage.removeItem('currentUser');

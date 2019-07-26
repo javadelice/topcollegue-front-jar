@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDatepickerKeyMapService } from '@ng-bootstrap/ng-bootstrap/datepicker/datepicker-keymap-service';
 import { AuthService } from '../services/auth.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { User } from '../models/User';
 import { UsersMock } from '../mock/UsersMock';
+import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -11,34 +13,46 @@ import { UsersMock } from '../mock/UsersMock';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isLoggedIn : Observable<User>;
+  isLoggedIn: boolean;
+  actionSub: Subscription;
 
+  constructor(private authService: AuthService, private router: Router) { }
 
-constructor(private authService:AuthService) {
-  this.isLoggedIn = this.authService.isLoggedIn();
-}
+  ngOnInit() {
+    this.authService.isLoggedIn().subscribe((collegue) => {
+      this.isLoggedIn = true;
+    }, (error:HttpErrorResponse) => {
+      this.isLoggedIn = false;
+    });
 
-deconnexion() {
-  this.authService.logout();
-}
+    this.actionSub = this.authService.abonnmenentLoggin().subscribe((isLoggedIn) => {
+      this.isLoggedIn = isLoggedIn;
+    }, (error:HttpErrorResponse) => {
+      this.isLoggedIn = false;
+      console.log(error);
+    })
 
-voteActive(){
+  }
 
-}
+  deconnexion() {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['/login']);
+      this.isLoggedIn = false;
+    }, (error: HttpErrorResponse) => {
+      console.log(error);
+    });
+  }
 
-classementActive(){
+  voteActive() {
 
-}
+  }
 
-ngOnInit() {
-  /*
-  this.authService.abonnementCollegue()
-  .subscribe(userGet=>{
-    this.currentUser = userGet;
-  })
-*/
-this.isLoggedIn = this.authService.isLoggedIn();
+  classementActive() {
 
-}
+  }
+
+  ngOnDestroy(): void {
+    this.actionSub.unsubscribe();
+  }
 }
 

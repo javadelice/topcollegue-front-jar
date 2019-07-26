@@ -1,0 +1,79 @@
+*   [31m1522546[m-[33m (HEAD -> issue-21-f11-guards, origin/master)[m Merge pull request #22 from javadelice/issue-21-f11-guards [32m(16 seconds ago) [1;34m<alexeiayinde>[m
+[31m|[m[32m\[m  
+[31m|[m * [31m9bcc53e[m-[33m (origin/issue-21-f11-guards)[m f11 [32m(3 minutes ago) [1;34m<Alexei AYINDE>[m
+[31m|[m[31m/[m  
+*   [31m76cf5ea[m-[33m (issue-19-f10-logout)[m Merge pull request #20 from javadelice/issue-19-f10-logout [32m(21 minutes ago) [1;34m<jbtm>[m
+[33m|[m[34m\[m  
+[33m|[m * [31m0dce642[m-[33m (origin/issue-19-f10-logout)[m f10 [32m(22 minutes ago) [1;34m<Alexei AYINDE>[m
+[33m|[m[33m/[m  
+*   [31m1c00dac[m-[33m (issue-2-f2-composant-participer)[m Merge pull request #18 from javadelice/VoterComponentLink [32m(61 minutes ago) [1;34m<jbtm>[m
+[35m|[m[36m\[m  
+[35m|[m * [31mdcfbb90[m-[33m[m Update app.component.html [32m(82 minutes ago) [1;34m<alexeiayinde>[m
+[35m|[m * [31me21cfa6[m-[33m[m refactoring [32m(11 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+[35m|[m[35m/[m  
+*   [31m503c355[m-[33m[m Merge pull request #17 from javadelice/issue-2-f2-composant-participer [32m(13 hours ago) [1;34m<jbtm>[m
+[1;31m|[m[1;32m\[m  
+[1;31m|[m *   [31mbf19734[m-[33m[m Merge branch 'master' into issue-2-f2-composant-participer [32m(13 hours ago) [1;34m<jbtm>[m
+[1;31m|[m [1;33m|[m[1;31m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m   
+* [1;33m|[m   [31m32c55b7[m-[33m[m Merge pull request #16 from javadelice/issue-f5-classement-2 [32m(13 hours ago) [1;34m<jbtm>[m
+[1;35m|[m[1;36m\[m [1;33m\[m  
+[1;35m|[m * [1;33m|[m [31mfeb1bc6[m-[33m[m optimisation affichage [32m(17 hours ago) [1;34m<Robin CASSAN>[m
+[1;35m|[m[1;35m/[m [1;33m/[m  
+* [1;33m|[m   [31mdfc0eac[m-[33m[m Merge pull request #15 from javadelice/VoterComponent [32m(17 hours ago) [1;34m<jbtm>[m
+[31m|[m[32m\[m [1;33m\[m  
+[31m|[m * [1;33m|[m [31m48ddb4e[m-[33m[m Refactoring [32m(17 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+* [32m|[m [1;33m|[m   [31ma1fb6a7[m-[33m[m Merge pull request #14 from javadelice/VoterComponent [32m(17 hours ago) [1;34m<jbtm>[m
+[33m|[m[32m\[m [32m\[m [1;33m\[m  
+[33m|[m [32m|[m[32m/[m [1;33m/[m  
+[33m|[m * [1;33m|[m   [31mbb2fe43[m-[33m[m Merge branch 'master' into VoterComponent [32m(17 hours ago) [1;34m<jbtm>[m
+[33m|[m [35m|[m[33m\[m [1;33m\[m  
+[33m|[m [35m|[m[33m/[m [1;33m/[m  
+[33m|[m[33m/[m[35m|[m [1;33m|[m   
+* [35m|[m [1;33m|[m   [31m96b8d8d[m-[33m[m Merge pull request #13 from javadelice/issue-f5-classement [32m(17 hours ago) [1;34m<jbtm>[m
+[1;31m|[m[1;32m\[m [35m\[m [1;33m\[m  
+[1;31m|[m * [35m\[m [1;33m\[m   [31m14790f4[m-[33m[m Merge branch 'master' into issue-f5-classement [32m(17 hours ago) [1;34m<jbtm>[m
+[1;31m|[m [1;33m|[m[1;31m\[m [35m\[m [1;33m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [35m/[m [1;33m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [35m|[m [1;33m|[m   
+[1;31m|[m * [35m|[m [1;33m|[m [31m7a9d310[m-[33m[m  classement front final [32m(18 hours ago) [1;34m<Robin CASSAN>[m
+[1;31m|[m * [35m|[m [1;33m|[m [31m58039d9[m-[33m[m front classement ok [32m(19 hours ago) [1;34m<Robin CASSAN>[m
+[1;31m|[m * [35m|[m [1;33m|[m [31mc3ed9dd[m-[33m[m version 1 classement [32m(23 hours ago) [1;34m<Robin CASSAN>[m
+[1;31m|[m * [35m|[m [1;33m|[m   [31m992aa52[m-[33m[m Merge branch 'master' of https://github.com/javadelice/topcollegue-front-jar [32m(25 hours ago) [1;34m<Robin CASSAN>[m
+[1;31m|[m [1;35m|[m[1;36m\[m [35m\[m [1;33m\[m  
+[1;31m|[m * [1;36m|[m [35m|[m [1;33m|[m [31m921c40d[m-[33m[m premier commit erreur de git bash [32m(25 hours ago) [1;34m<Robin CASSAN>[m
+[1;31m|[m [1;36m|[m [1;36m|[m * [1;33m|[m [31m3fe4c43[m-[33m[m #3 - VoterComponent - first design [32m(18 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+[1;31m|[m [1;36m|[m[1;31m_[m[1;36m|[m[1;31m/[m [1;33m/[m  
+[1;31m|[m[1;31m/[m[1;36m|[m [1;36m|[m [1;33m|[m   
+[1;31m|[m [1;36m|[m [1;36m|[m * [31m5bc515b[m-[33m (origin/issue-2-f2-composant-participer)[m f2 [32m(15 hours ago) [1;34m<Alexei AYINDE>[m
+[1;31m|[m [1;36m|[m[1;31m_[m[1;36m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;36m|[m [1;36m|[m   
+* [1;36m|[m [1;36m|[m   [31mbebfbef[m-[33m (master)[m Merge pull request #10 from javadelice/dserv [32m(19 hours ago) [1;34m<jbtm>[m
+[31m|[m[32m\[m [1;36m\[m [1;36m\[m  
+[31m|[m * [1;36m\[m [1;36m\[m   [31m571c363[m-[33m[m Merge branch 'master' into dserv [32m(19 hours ago) [1;34m<jbtm>[m
+[31m|[m [33m|[m[31m\[m [1;36m\[m [1;36m\[m  
+[31m|[m [33m|[m[31m/[m [1;36m/[m [1;36m/[m  
+[31m|[m[31m/[m[33m|[m [1;36m|[m [1;36m|[m   
+* [33m|[m [1;36m|[m [1;36m|[m   [31m4bd808c[m-[33m[m Merge pull request #11 from javadelice/navbar [32m(19 hours ago) [1;34m<jbtm>[m
+[35m|[m[36m\[m [33m\[m [1;36m\[m [1;36m\[m  
+[35m|[m * [33m|[m [1;36m|[m [1;36m|[m [31ma19bedc[m-[33m[m #4 [32m(21 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+[35m|[m * [33m|[m [1;36m|[m [1;36m|[m [31mf12e227[m-[33m[m navbar pattern created [32m(21 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+[35m|[m [1;36m|[m [33m|[m[1;36m_[m[1;36m|[m[1;36m/[m  
+[35m|[m [1;36m|[m[1;36m/[m[33m|[m [1;36m|[m   
+* [1;36m|[m [33m|[m [1;36m|[m   [31m08c5eb4[m-[33m[m Merge pull request #12 from javadelice/jbtmathieu-patch-1 [32m(19 hours ago) [1;34m<jbtm>[m
+[1;36m|[m[1;32m\[m [1;36m\[m [33m\[m [1;36m\[m  
+[1;36m|[m [1;32m|[m[1;36m/[m [33m/[m [1;36m/[m  
+[1;36m|[m[1;36m/[m[1;32m|[m [33m|[m [1;36m|[m   
+[1;36m|[m * [33m|[m [1;36m|[m [31m4a39016[m-[33m[m Update README.md [32m(19 hours ago) [1;34m<jbtm>[m
+[1;36m|[m[1;36m/[m [33m/[m [1;36m/[m  
+[1;36m|[m * [1;36m|[m [31mf2308f1[m-[33m[m #6 Data Service + models User &Vote + backendUrl specified [32m(19 hours ago) [1;34m<Jean-Baptiste Tâm MATHIEU>[m
+[1;36m|[m[1;36m/[m [1;36m/[m  
+* [1;36m|[m [31m9686907[m-[33m[m Configuration travis.yml [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+* [1;36m|[m [31m4e0ea8d[m-[33m[m Suppression 'keep-history' dans .travis.yml [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+* [1;36m|[m [31m57ca5a0[m-[33m[m Changement nom site [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+* [1;36m|[m [31m1597e8b[m-[33m[m Correction fichier .travis.yml [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+* [1;36m|[m [31ma02a17a[m-[33m[m Déploiement sur Travis [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+[1;36m|[m[1;36m/[m  
+* [31m12ac671[m-[33m[m Ajout dépendances bootstrap [32m(2 days ago) [1;34m<Alexei AYINDE>[m
+* [31mb57039a[m-[33m[m initial commit [32m(2 days ago) [1;34m<Alexei AYINDE>[m
