@@ -13,29 +13,26 @@ import { VoterComponent } from './voter/voter.component';
 
 const ROUTES: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'vote', component: HeaderComponent },
-  { path: 'classement', component: HeaderComponent },
+  { path: 'vote', component: VoterComponent },
+  { path: 'classement', component: ClassementComponent },
   { path: '', pathMatch: 'full', redirectTo: 'login'}
-
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    VoterComponent,
+    ClassementComponent,
   ],
   imports: [
     FormsModule,
-    VoterComponent,
-    ClassementComponent
-  ],
-  imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
-    NgbModule,
-    BrowserModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

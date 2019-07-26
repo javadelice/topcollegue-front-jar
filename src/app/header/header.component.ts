@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDatepickerKeyMapService } from '@ng-bootstrap/ng-bootstrap/datepicker/datepicker-keymap-service';
+import { AuthService } from '../services/auth.service';
+import { Observable } from 'rxjs';
+import { User } from '../models/User';
+import { UsersMock } from '../mock/UsersMock';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +11,15 @@ import { NgbDatepickerKeyMapService } from '@ng-bootstrap/ng-bootstrap/datepicke
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-currentUser:string="";
+  isLoggedIn : Observable<User>;
 
-//constructor(private _srv:Dataservice, private authService: AuthService) {}
 
-constructor() {}
+constructor(private authService:AuthService) {
+  this.isLoggedIn = this.authService.isLoggedIn();
+}
 
 deconnexion() {
-  /*this.authService.logout().subscribe(() =>{}
-  this.authService.resetCollegue();
-  this.router.navigate(['/login']);
-  },(err:HttpErrorResponse)=>{
-  console.log("deconnexion impossible");
-  })
-*/
+  this.authService.logout();
 }
 
 voteActive(){
@@ -38,7 +37,7 @@ ngOnInit() {
     this.currentUser = userGet;
   })
 */
-
+this.isLoggedIn = this.authService.isLoggedIn();
 
 }
 }
