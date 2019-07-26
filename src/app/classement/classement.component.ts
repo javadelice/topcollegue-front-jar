@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { hasClassName } from '@ng-bootstrap/ng-bootstrap/util/util';
+import { DataService } from '../services/data.service';
+import { EluScoreDTO } from '../models/elu-score-dto';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-classement',
@@ -9,14 +12,16 @@ import { hasClassName } from '@ng-bootstrap/ng-bootstrap/util/util';
 })
 export class ClassementComponent implements OnInit {
 
-  elus = [{"score":1,"nom":"Cassan", "prenom": "Robin", "photo":"http://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"},
-  {"score":2,"nom":"Ayinde", "prenom": "Alexei", "photo":"http://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"},
-  {"score":3,"nom":"Mathieu", "prenom": "Jean-Baptiste", "photo":"http://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}];
+  elus: EluScoreDTO[];
 
-
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.recupScore().subscribe((elus:EluScoreDTO[]) => {
+      this.elus = elus;
+    }, (error:HttpErrorResponse) => {
+      console.log(error);
+    })
   }
 
 

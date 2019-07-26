@@ -1,23 +1,23 @@
 <section>
-  <h1 align="center" >Top Collègues</h1>
+  <h1 align="center">Top Collègues</h1>
 </section>
 
 <nav class="navbar navbar-expand navbar-light" style="background-color: #e3f2fd;" *ngIf="isLoggedIn">
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-    </div>
-    <div class="mx-auto order-0">
-        <a class="page-link" routerLink='/vote' (click)="voteActive()" aria-checked="" name="buttonVotes"> Votes</a>
-        <a class="page-link" routerLink='/classement' (click)="classementActive()" name="buttonClassement">
-          Classement</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" (click)="deconnexion()" routerLink=''>Logout</a>
-            </li>
-        </ul>
-    </div>
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+  </div>
+  <div class="mx-auto order-0">
+    <a class="page-link" routerLink='/vote' routerLinkActive="active-link" aria-checked="" name="buttonVotes"> Votes</a>
+    <a class="page-link" routerLink='/classement' routerLinkActive="active-link" name="buttonClassement">
+      Classement</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" (click)="deconnexion()" routerLink=''>Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>
